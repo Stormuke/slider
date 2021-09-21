@@ -16,6 +16,14 @@ downButton.addEventListener('click', () => {
     changeSlide('down')
 })
 
+document.addEventListener('wheel', (evt) => {
+    if (evt.deltaY < 0) {
+        changeSlide('up')
+    } else {
+        changeSlide('down')
+    }
+})
+
 function changeSlide(direction) {
     if (direction === 'up') {
         activeSlideIndex++
